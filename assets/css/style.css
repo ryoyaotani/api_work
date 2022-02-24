@@ -1,0 +1,246 @@
+img{
+    max-width: 100%;
+}
+
+.mainvisual{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/topologiraffe-8DHMnWPhVpw-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.circle{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin-top: 5%;
+}
+
+.circle-right{
+    margin-right: 2%;
+}
+
+.circle-left{
+    margin-left: 2%;
+}
+
+
+.station{
+    width: 100px;
+    height: 50px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: solid 3px rgb(129, 126, 126);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.circle-top, .circle-bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle-right .station, .circle-left .station{
+    margin: 40% auto;
+}
+
+.demo_item{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-image: url("../img/train-removebg-preview.png");
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+}
+
+.demo_item.anime{
+    animation-name: upDown;
+    animation-iteration-count: infinite;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-timing-function: steps(2);
+    transition-duration: .3s;
+    transition-property: transform;
+}
+
+.demo_stage{
+    position: relative;
+    width: 80%;
+    height: 65px;
+    top: -250px;
+    display: block;
+    /* border-bottom: double #777 3px; */
+    margin: 0 auto;
+}
+
+.demo_wrap{
+    display: block;
+    position: absolute;
+    top: 20px;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    margin-right: -25px;
+}
+
+.demo_wrap[data-order="left"]{
+    animation-name: GoLeft;
+}
+
+.demo_wrap[data-order="right"]{
+    animation-name: GoRight;
+}
+
+[data-order="right"] > .demo_item{
+    transform: rotateY(180deg);
+}
+
+@keyframes GoLeft{
+    0%{
+        right: 10%;
+    }
+    100%{
+        right: 90%;
+    }
+}
+
+@keyframes GoRight{
+    0%{
+        right: 90%;
+    }
+    100%{
+        right: 10%;
+    }
+}
+
+@keyframes upDown{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 3px;
+    }
+}
+
+.load{
+    width: 100vw;
+    height: 100vh;
+    background-image:  radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
+    z-index: 99999;
+    position: fixed;
+}
+
+  
+  
+  .loader {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    perspective: 800px;
+    color: white;
+  }
+  
+  .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+  }
+  
+  .inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 3s linear infinite;
+    border-bottom: 3px solid #EFEFFA;
+  }
+  
+  .inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 3s linear infinite;
+    border-right: 3px solid #EFEFFA;
+  }
+  
+  .inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 3s linear infinite;
+    border-top: 3px solid #EFEFFA;
+  }
+  
+  .text{
+    left: 25%;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.651);
+    position: absolute;
+    z-index: -1;
+    font-size: 50px;
+    animation: rotate 5s linear infinite;
+  }
+  
+  
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateX(10deg) rotateY(-20deg) rotateZ(0deg);
+      opacity: 100%;
+    }
+    50%{
+      opacity: 0%;
+    }
+    100% {
+      transform: rotateX(10deg) rotateY(-20deg) rotateZ(360deg);
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes rotate-one {
+    0% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-two {
+    0% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+  }
+  
+  @keyframes rotate-three {
+    0% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+  }
