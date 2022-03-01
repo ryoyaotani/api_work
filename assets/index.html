@@ -53,7 +53,21 @@
             <div class="event">
                 <h1 class="station-name"></h1>
                 <p class="station-text"></p>
-                <div class="station-button">ゲームに戻る</div>
+                <div class="station-background">
+                    <div class="station-button">ゲームに戻る</div>
+                </div>
+            </div>
+            <div class="modal">
+                <div class="modal__bg"></div>
+                <div class="modal__content">
+                    <h1>高輪ゲートウェイ</h1>
+                    <p>Congratulation!!!<br>
+                        ルイス先生からお小遣い1万円貰えるらしいです。
+                    </p>
+                    <div class="modal-background">
+                        <a href="" class="js-modal-close">最初からもう一度</a>
+                    </div>
+                </div>
             </div>
             <div id="container">
                 <div class="cube">
@@ -92,25 +106,26 @@
             </div>
         </div>
         <div class="bottom">
-            <!-- <div class="show-text">
-                <p class="p-show">ゲームの説明</p>
-            </div> -->
             <div class="hide-bottom">
                 <div class="hide-inner">
                     <p class="p-show">ゲームの説明</p>
                     <div class="hide-content">
-                            <div class="hide-text">
-                                <h2 class="hide-title1">出発進行!目的地を目指そう!</h2>
-                                <p class="text-bottom">サイコロを振って、出た目の数だけ進めるよ。 目的地を目指して進んでいこう。青い駅に止まれば所持金が増える!赤い駅だと減ってしまうよ。他にもカードがもらえる駅や、カードを買える駅、宝くじを引ける駅など色々な駅があるから、 寄り道するのも無駄じゃない!</p>
-                            </div>
-                            <div class="hide-img">
-                                <img src="../assets/img/point01_img.png" alt="">
-                            </div>  
+                        <div class="hide-text">
+                            <h2 class="hide-title1">出発進行!目的地を目指そう!</h2>
+                            <p class="text-bottom">サイコロを振って、出た目の数だけ進めるよ。
+                                目的地を目指して進んでいこう。青い駅に止まれば所持金が増える!赤い駅だと減ってしまうよ。他にもカードがもらえる駅や、カードを買える駅、宝くじを引ける駅など色々な駅があるから、
+                                寄り道するのも無駄じゃない!</p>
+                        </div>
+                        <div class="hide-img">
+                            <img src="../assets/img/point01_img.png" alt="">
+                        </div>
                     </div>
                     <div class="hide-content change">
                         <div class="hide-text">
                             <h2 class="hide-title2">物件を購入して資金を増やそう!</h2>
-                            <p class="text-bottom">駅に停まったら物件の価格と収益率をチェックしよう。 物件をたくさん持っていれば3月末の決算時に多額の収益金がもらえるよ!物件には食品、商業、水産、工業、観光、農林などの種類があり、それぞれに特徴があるぞ。 条件を満たせば多額の臨時収入がもらえる場合も!</p>
+                            <p class="text-bottom">駅に停まったら物件の価格と収益率をチェックしよう。
+                                物件をたくさん持っていれば3月末の決算時に多額の収益金がもらえるよ!物件には食品、商業、水産、工業、観光、農林などの種類があり、それぞれに特徴があるぞ。
+                                条件を満たせば多額の臨時収入がもらえる場合も!</p>
                         </div>
                         <div class="hide-img">
                             <img src="../assets/img/point02_img.jpeg" alt="">
@@ -119,14 +134,14 @@
                     <div class="hide-content last">
                         <div class="hide-text">
                             <h2 class="hide-title3">1番乗りで援助金ゲット!</h2>
-                            <p class="text-bottom">目的地に1番乗りすると、多額の援助金ゲット! 1番に目的地に到着したプレイヤーにはたくさんの援助金がもらえるぞ!次の目的地がセットされ、目的地から一番遠い場所にいるプレイヤーには貧乏神がとりつくから要注意!</p>
+                            <p class="text-bottom">目的地に1番乗りすると、多額の援助金ゲット!
+                                1番に目的地に到着したプレイヤーにはたくさんの援助金がもらえるぞ!次の目的地がセットされ、目的地から一番遠い場所にいるプレイヤーには貧乏神がとりつくから要注意!</p>
                         </div>
                         <div class="hide-img">
                             <img src="../assets/img/point03_img.jpeg" alt="">
                         </div>
                     </div>
                 </div>
-                <!-- <p class="p-hide">最初に目的地の駅がルーレットで決められる。プレイヤーは順番にサイコロを振り、出た目の数だけ汽車を進め目的地を目指す。ルート上であれば、どの方向に進むのもプレイヤーの自由。移動数は単純に汽車を進めた数なので、移動できる数が多い場合、環状線のルートを何周もして移動数を消費するなどもできる。駅がすごろくのマス目となっており、移動後止まった駅に応じて持ち金が増減する・カードが貰える・物件が買えるといったイベントが発生する（駅については後述）。プレイヤー全員の行動が終わると1か月が経過となり次の月に移る。本シリーズでの1年は4月から始まり、3月までの12ターンとなっており、3月終了時には「決算」となり、物件の収益金や途中経過の発表が行われる。</p> -->
             </div>
             <button class="readmore">Read more</button>
         </div>
@@ -139,6 +154,8 @@
         </script>
     <!-- Ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     <!-- js -->
     <script src="./js/script.js"></script>
 </body>
