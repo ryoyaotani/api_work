@@ -1,0 +1,82 @@
+
+
+
+@mixin screen1{
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+@mixin screen2{
+    @media screen and (min-width:501px) and (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin screen3{
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin screen4{
+    @media screen and (min-width: 1024px) and (max-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin screen0_2{
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin screen0_3{
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin screen2_3{
+    @media screen and (min-width: 501px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin screen2_4{
+    @media screen and (min-width: 501px) and (max-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin screen3_4{
+    @media screen and (min-width: 768px) and (max-width: 1240px) {
+        @content;
+    }
+}
+
+
+
+@mixin all_screen{
+    @media screen and (max-width: 1240px) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+@import "_all.scss";
+
+
+
+
+
+
+
+
+
+
